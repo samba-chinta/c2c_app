@@ -1,0 +1,55 @@
+.cardWrapper {
+  width: 50%;
+  padding: 15px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px auto;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px #eee,
+     -2px -2px 5px #f1f1f1;
+}
+
+.cardWrapper:hover {
+  transform: scale(1.03);
+}
+
+.userDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.loanDetails{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.status {
+  display: grid;
+  grid-template-rows: 2 1fr;
+  justify-content: center;
+}
+
+button {
+  margin: 0 5px;
+  padding: 10px;
+  outline: none;
+  background-color: none;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.acceptBtn {
+  background-color: #00c853;
+}
+
+.rejectBtn {
+  background-color: #ff3d00;
+}
