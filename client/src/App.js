@@ -7,6 +7,7 @@ import ForgetPassword from "./components/Authentication/ForgetPassword";
 import Navigation from "./components/Navigation/Navigation";
 import UserRequest from "./components/UserRequest/UserRequest";
 import LoanRequest from "./components/LoanRequest/LoanRequest";
+import Profile from "./components/Profile/Profile";
 
 function App() {
   const isLoggedIn = true;
@@ -27,6 +28,7 @@ function App() {
             <Route path="/" element={<h2>Welcome to Home Page</h2>}/>
             <Route path="/userrequests" element={<UserRequest/>}/>
             <Route path="/requestloan" element={<LoanRequest/>}/>
+            <Route path="/profile" element={<Profile/>}/>
           </Routes>
         )}
       </header>

@@ -15,10 +15,10 @@ const Signup = (props) => {
     const emailRegex = new RegExp("^[a-zA-Z0-9+_.-]+@gmail.com$");
 
     if (
-      email.current.value == "" ||
-      username.current.value == "" ||
-      password.current.value == "" ||
-      confirmPassword.current.value == "" ||
+      email.current.value === "" ||
+      username.current.value === "" ||
+      password.current.value === "" ||
+      confirmPassword.current.value === "" ||
       !phone.current.value
     ) {
       alert("Please enter all the details");
@@ -27,10 +27,10 @@ const Signup = (props) => {
         alert("Username length must be atleast 8");
       } else if (!emailRegex.test(email.current.value)) {
         alert("Invalid Email Address")
-      }else if (password.current.value != confirmPassword.current.value) {
+      }else if (password.current.value !== confirmPassword.current.value) {
         alert("Both password and confirm password must Match");
       } else if (
-        phone.current.value.length != 10 &&
+        phone.current.value.length !== 10 &&
         phone.current.value[0] in [0, 1, 2, 3, 4, 5]
       ) {
         alert("Invalid Phone Number");

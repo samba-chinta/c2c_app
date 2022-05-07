@@ -1,0 +1,75 @@
+.wrapper {
+  width: 60%;
+  margin: 20px auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.userInfo {
+  margin: 30px 0;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.userInfo .state {
+  color: red;
+}
+
+.userInfo img {
+  width: 50px;
+  height: 50px;
+}
+
+.userInfo h3 {
+  font-size: 24px;
+}
+
+.profileForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.profileForm [type="text"] {
+  outline: none;
+  border: solid 2px #000;
+  padding: 10px;
+}
+
+.profileForm [type="text"]:active {
+  border-color: blueviolet;
+}
+
+.profileForm [type="text"]::placeholder{
+  color: #000;
+}
+
+.profileForm [type="submit"] {
+  outline: none;
+  background-color: blueviolet;
+  border: solid 2px blueviolet;
+  padding: 10px;
+  color: #fff;
+}
+
+.profileForm [type="submit"]:hover {
+  background-color: transparent;
+  color: blueviolet;
+  transition: all 0.5s ease-in;
+}
+
+@media screen and (min-width: 551px) and (max-width:980px){
+  .wrapper {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width:550px){
+  .wrapper {
+    width: 80%;
+  }
+  .profileForm , .userInfo{
+    display: flex;
+    flex-direction: column;
+  }
+}
