@@ -1,4 +1,6 @@
+import React, { useEffect }  from "react";
 import { Routes, Route } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 
 import Welcome from "./components/welcome_page/Welcome";
 import Signin from "./components/Authentication/Signin";
@@ -9,9 +11,24 @@ import UserRequest from "./components/UserRequest/UserRequest";
 import LoanRequest from "./components/LoanRequest/LoanRequest";
 import Profile from "./components/Profile/Profile";
 import Dashboard from "./components/Dashboard/Dashboard";
+import { authActions } from "./store/userAuthSlice";
 
 function App() {
-  const isLoggedIn = true;
+  const dispatch = useDispatch();
+  const isLoggedIn = useSelector(state => state.isLoggedIn);
+
+  useEffect(() => {
+    const token = localStorage.getItem("authentication-token");
+    if (token) {
+      const { userEmail } = JSON.parse(token);
+      dispatch(
+        authActions.login({
+          email: userEmail,
+        })
+      )
+    }
+  })
+  
   return (
     <div className="App">
       <header className="App-header">

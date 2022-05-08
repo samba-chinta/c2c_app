@@ -1,19 +1,21 @@
 .header {
+  background-color: blueviolet;
+}
+
+.container {
   display: flex;
   padding: 10px;
   height: 3em;
   justify-content: space-between;
   align-items: center;
-  background-color: blueviolet;
 }
 
 .navigation {
-  width: 50%;
-  display: flex;
-  justify-content: space-around;
+  background-color: blueviolet;
 }
 
 .navigation a {
+  margin:0 20px;
   text-decoration: none;
   color: #fff;
   font-weight: bold;
@@ -33,13 +35,13 @@
 }
 
 @media screen and (min-width: 501px) and (max-width:980px){
-  .navigation {
-    width: 70%;
+  .navigation a{
+    margin: 10px;
   }
 }
 
 @media screen and (max-width:500px){
-  .navigation {
-    display: none;
-  }
+    .navigation a{
+      margin: 10px;
+    }
 }
